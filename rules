@@ -2,3 +2,26 @@
 
 %:
 	dh $@
+
+override_dh_auto_configure:
+
+override_dh_install:
+ifeq ($(PREFIX),)
+    PREFIX := debian/tmp/usr/local
+endif
+
+INSTALL_DIR := $(PREFIX)/include/
+install: firmware/include/api/	
+	mkdir -p $(INSTALL_DIR)
+	cp -r firmware/include/api/ $(INSTALL_DIR)
+	chmod 755 $(PREFIX)/include/api
+	dh_install
+
+override_dh_auto_build:
+
+override_dh_clean:
+	sudo rm -rf debian/tmp
+	dh_clean
+
+override_dh_binary:
+

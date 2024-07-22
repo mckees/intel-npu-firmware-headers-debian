@@ -17,16 +17,5 @@ Package: intel-npu-firmware-headers
 Architecture: amd64
 Multi-Arch: same
 Depends:
- ${shlibs:Depends},
  ${misc:Depends},
 Description: This package contains the firmware headers for Intel® NPU device.
-
-#Package: linux-npu-driver-dev
-#Section: libdevel
-#Architecture: amd64
-#Multi-Arch: same
-#Depends:
-# linux-npu-driver (= ${binary:Version}),
-# ${misc:Depends},
-#Description: This dev package contains the driver for Intel® NPU device.
-# Intel® NPU device is an AI inference accelerator integrated with Intel client CPUs, starting from Intel® Core™ Ultra generation of CPUs (formerly known as Meteor Lake). It enables energy-efficient execution of artificial neural network tasks.
