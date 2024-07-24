@@ -1,7 +1,11 @@
-linux-npu-driver for Debian
+intel-npu-firmware-headers for Debian
 --------------------------
 
-Please see README at https://github.com/intel/linux-npu-driver for further information
+The source for this package is https://github.com/intel/linux-npu-driver. 
+The reason for this is that the vpux-elf package depends on headers in 
+linux-npu-driver, but linux-npu-driver depends on the vpux-elf package.
+The solution at this time is to package those headers into their own package 
+first
 
 
  -- Shane McKee <shane.mckee@canonical.com>  Thu, 11 Jul 2024 19:30:21 +0800
