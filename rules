@@ -7,7 +7,7 @@ override_dh_auto_configure:
 
 override_dh_install:
 ifeq ($(PREFIX),)
-    PREFIX := debian/tmp/usr/local
+    PREFIX := debian/tmp/usr
 endif
 
 INSTALL_DIR := $(PREFIX)/include/

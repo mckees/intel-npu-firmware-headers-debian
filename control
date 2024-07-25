@@ -15,4 +15,6 @@ Architecture: amd64
 Multi-Arch: same
 Depends:
  ${misc:Depends},
-Description: This package contains the firmware headers for Intel® NPU device.
+Description: This package contains the firmware headers for Intel® NPU device
+ These headers are contained in the linux-driver-npu repo, but they are used
+ elsewhere in other builds, so they are being packaged separately.
